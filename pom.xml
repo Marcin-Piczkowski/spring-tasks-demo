@@ -5,11 +5,10 @@
 
     <groupId>com.demo</groupId>
     <artifactId>spring-tasks-demo</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
-
     </properties>
 
     <!-- Profiles -->
@@ -63,6 +62,24 @@
         </profile>
     </profiles>
     <!-- end of profiles -->
+
+    <scm>
+       <connection>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</connection>
+       <url>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</url>
+       <developerConnection>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+      <repository>
+        <id>nexus3-aurea-releases</id>
+        <url>https://nexus.devfactory.com/repository/aurea-lyris-releases/</url>
+      </repository>
+       <!-- snapshot repository -->
+       <snapshotRepository>
+         <id>nexus3-aurea-snapshots</id>
+         <url>https://nexus.devfactory.com/repository/aurea-lyris-snapshots/</url>
+       </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
 
@@ -229,6 +246,24 @@
                 </executions>
             </plugin>
 
+            <!-- relase plugin -->
+            <plugin>
+      				<groupId>org.apache.maven.plugins</groupId>
+      				<artifactId>maven-release-plugin</artifactId>
+      				<version>2.5.3</version>
+      				<configuration>
+      					<tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
+      					<autoVersionSubmodules>true</autoVersionSubmodules>
+
+                <!--
+                    During release:perform, enable the "full-test" profile
+                -->
+      					<releaseProfiles>full-test</releaseProfiles>
+
+      					<!-- Define here what goals you want to prepare your release -->
+      					<preparationGoals>clean install</preparationGoals>
+      				</configuration>
+      			</plugin>
         </plugins>
     </build>
 
