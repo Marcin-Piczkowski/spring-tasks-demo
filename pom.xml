@@ -64,9 +64,9 @@
     <!-- end of profiles -->
 
     <scm>
-       <connection>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</connection>
-       <url>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</url>
-       <developerConnection>scm:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</developerConnection>
+       <connection>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</connection>
+       <url>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</url>
+       <developerConnection>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</developerConnection>
     </scm>
 
     <distributionManagement>
