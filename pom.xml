@@ -4,7 +4,7 @@
 
     <groupId>com.demo</groupId>
     <artifactId>spring-tasks-demo</artifactId>
-    <version>0.0.10</version>
+    <version>0.0.11-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -66,7 +66,7 @@
        <connection>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</connection>
        <url>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</url>
        <developerConnection>scm:git:git@github.com:Marcin-Piczkowski/spring-tasks-demo.git</developerConnection>
-      <tag>spring-tasks-demo-0.0.10</tag>
+      <tag>spring-tasks-demo-%env.release.version</tag>
   </scm>
 
     <distributionManagement>
